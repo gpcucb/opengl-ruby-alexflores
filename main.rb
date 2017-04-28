@@ -132,7 +132,7 @@ def display
   #Dibujamos la pierna izquierda
   glColor3f(0.0,0.3,0.8)
   glPushMatrix
-    glRotatef(270,(@BODY_WIDTH-@LEG_WIDTH)/2, -(@BODY_HEIGHT+@LEG_HEIGHT)/2,0)
+    glRotatef(290,(@BODY_WIDTH-@LEG_WIDTH)/2, -(@BODY_HEIGHT+@LEG_HEIGHT)/2,0)
     glTranslatef((@BODY_WIDTH-@LEG_WIDTH)/2, -(@BODY_HEIGHT+@LEG_HEIGHT)/2,0)
     #glRotatef(360,(@BODY_WIDTH-@LEG_WIDTH)/2, -(@BODY_HEIGHT+@LEG_HEIGHT)/2,0)
     glPushMatrix
@@ -140,13 +140,12 @@ def display
       glutSolidCube(1)
     glPopMatrix
     # ahora el píe
-    glRotatef(270,(@BODY_WIDTH-@LEG_WIDTH)/2, -(@BODY_HEIGHT+@LEG_HEIGHT)/2,0)
+    #glRotatef(290,0,-(@LEG_HEIGHT+@LEG_WIDTH)/2,@LEG_LENGTH)
     glTranslatef(0,-(@LEG_HEIGHT+@LEG_WIDTH)/2,@LEG_LENGTH)
-    #glRotatef(360,(@BODY_WIDTH-@LEG_WIDTH)/2, -(@BODY_HEIGHT+@LEG_HEIGHT)/2,0)
+    glRotatef(360,(@BODY_WIDTH-@LEG_WIDTH)/2, -(@BODY_HEIGHT+@LEG_HEIGHT)/2,0)
     glColor3f(0.3,0.4,0.4)
     glScalef(@LEG_WIDTH,@LEG_WIDTH,@LEG_LENGTH*2)
     glutSolidCube(1)
-
   glPopMatrix
 
   # Dibujamos la cabeza
